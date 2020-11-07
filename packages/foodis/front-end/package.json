@@ -5,10 +5,9 @@
   "@root/shared": "*",
   "dependencies": {
     "web-vitals": "^0.2.4",
-    "mobx": "^5.15.2",
-    "mobx-react": "^6.1.5",
+    "mobx": "6.0.3",
+    "mobx-react": "6.3.1",
     "mobx-react-devtools": "^6.1.1",
-    "mobx-react-lite": "^2.0.6",
     "mobx-react-router": "^4.1.0",
     "react": "16.8.6",
     "react-app-rewired": "^2.1.3",
