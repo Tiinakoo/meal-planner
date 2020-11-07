@@ -1,38 +1,41 @@
+@import './styles/colors';
+@import './styles/mixins';
+@import './styles/baseline';
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page {
+  width: 100%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.panel {
+  margin: 5 * $baseline auto;
+  background-color: $secondaryColor;
+  padding: 2 * $baseline;
+  max-width: 60 * $baseline;
+
+  @include md {
+    max-width: 80 * $baseline;
+  }
+
+  @include lg {
+    max-width: 120 * $baseline;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.cards {
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ .card {
+   background-color: $primaryColor;
+   padding: 1rem;
+   height: 4rem;
 }

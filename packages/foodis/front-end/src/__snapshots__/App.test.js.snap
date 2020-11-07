@@ -5,11 +5,19 @@ exports[`App renders 1`] = `
   <div
     className="App"
   >
-    <header
-      className="App-header"
+    <div
+      className="page"
     >
-      This is going to be an awesome meal planner app!
-    </header>
+      <div
+        className="panel"
+      >
+        <div
+          className="typography__primary"
+        >
+          This is the most awesome meal app ever!
+        </div>
+      </div>
+    </div>
   </div>
 </App>
 `;

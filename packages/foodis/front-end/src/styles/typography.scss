@@ -1,0 +1,62 @@
+@import 'baseline';
+
+@mixin primaryFont() {
+  font-family: 'Lato', sans-serif;
+}
+
+@mixin secondaryFont() {
+  font-family: 'Roboto Slab', serif;
+}
+
+$typographySizes: (
+  (
+    name: 'xl',
+    sizesFromBreakpoint: (
+      (
+        breakpoint: 'xs',
+        fontSize: 10 * $typographyBaseline,
+        lineHeight: 12 * $typographyBaseline,
+      ),
+    ),
+  ),
+  (
+    name: 'lg',
+    sizesFromBreakpoint: (
+      (
+        breakpoint: 'xs',
+        fontSize: 10 * $typographyBaseline,
+        lineHeight: 12 * $typographyBaseline,
+      ),
+    ),
+  ),
+  (
+    name: 'md',
+    sizesFromBreakpoint: (
+      (
+        breakpoint: 'xs',
+        fontSize: 8 * $typographyBaseline,
+        lineHeight: 10 * $typographyBaseline,
+      ),
+    ),
+  ),
+  (
+    name: 'sm',
+    sizesFromBreakpoint: (
+      (
+        breakpoint: 'xs',
+        fontSize: 6 * $typographyBaseline,
+        lineHeight: 8 * $typographyBaseline,
+      ),
+    ),
+  ),
+  (
+    name: 'xs',
+    sizesFromBreakpoint: (
+      (
+        breakpoint: 'xs',
+        fontSize: 5 * $typographyBaseline,
+        lineHeight: 7 * $typographyBaseline,
+      ),
+    ),
+  ),
+);
