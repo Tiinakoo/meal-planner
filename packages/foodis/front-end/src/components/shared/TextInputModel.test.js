@@ -5,7 +5,7 @@ describe("TextInputModel", () => {
   let model;
 
   beforeEach(() => {
-    model = new TextInputModel();
+    model = new TextInputModel({ required: false });
   });
 
   it("is observed", () => {
@@ -20,6 +20,12 @@ describe("TextInputModel", () => {
     model.setValue("some-value");
 
     expect(model.value).toBe("some-value");
+  });
+
+  it("when constructed as required, is required", () => {
+    const model = new TextInputModel({ required: true });
+
+    expect(model.required).toBe(true);
   });
 
   it("knows how to reset value", () => {
