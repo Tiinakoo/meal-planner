@@ -7,11 +7,15 @@ export default class CreateDepartmentModel {
     this.dependencies.submitDepartment = submitDepartment;
   }
 
-  name = new TextInputModel();
+  name = new TextInputModel({ required: true });
 
   submit = async () => {
     await this.dependencies.submitDepartment({ name: this.name.value });
 
     this.name.reset();
   };
+
+  get isValid() {
+    return this.name.isValid;
+  }
 }

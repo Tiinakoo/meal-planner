@@ -11,21 +11,35 @@ describe("CreateDepartmentModel", () => {
     model = new CreateDepartmentModel(submitDepartmentMock);
   });
 
-  describe("given required fields have been set, when submitted", () => {
+  it("given name has not been set, when validity is checked, knows not to be valid", () => {
+    expect(model.isValid).toBe(false);
+  });
+
+  describe("given name have been set", () => {
     beforeEach(() => {
       model.name.setValue("some-name");
-
-      model.submit();
     });
 
-    it("submits department", () => {
-      expect(submitDepartmentMock).toHaveBeenCalledWith({ name: "some-name" });
+    it("when validity is checked, knows to be valid", () => {
+      expect(model.isValid).toBe(true);
     });
 
-    it("when submit resolves, clears input", async () => {
-      await submitDepartmentMock.resolve();
+    describe("when submitted", () => {
+      beforeEach(() => {
+        model.submit();
+      });
 
-      expect(model.name.value).toBe("");
+      it("submits department", () => {
+        expect(submitDepartmentMock).toHaveBeenCalledWith({
+          name: "some-name",
+        });
+      });
+
+      it("when submit resolves, clears input", async () => {
+        await submitDepartmentMock.resolve();
+
+        expect(model.name.value).toBe("");
+      });
     });
   });
 });
