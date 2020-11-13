@@ -1,4 +1,5 @@
 import { makeAutoObservable } from "mobx";
+import { isNil } from "lodash/fp";
 
 export default class TextInputModel {
   value = "";
@@ -22,4 +23,12 @@ export default class TextInputModel {
     this.value = "";
     this.required = false;
   };
+
+  get isValid() {
+    if (!this.required) {
+      return true;
+    }
+
+    return !isNil(this.value) && this.value !== "";
+  }
 }

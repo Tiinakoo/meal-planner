@@ -12,8 +12,14 @@ describe("TextInputModel", () => {
     expect(isObservable(model)).toBe(true);
   });
 
-  it("has no value", () => {
-    expect(model.value).toBe("");
+  describe("initially", () => {
+    it("has no value", () => {
+      expect(model.value).toBe("");
+    });
+
+    it("given no required values, is valid", () => {
+      expect(model.isValid).toBe(true);
+    });
   });
 
   it("knows how to set value", () => {
@@ -22,10 +28,22 @@ describe("TextInputModel", () => {
     expect(model.value).toBe("some-value");
   });
 
-  it("when constructed as required, is required", () => {
-    const model = new TextInputModel({ required: true });
+  describe("when constructed as required", () => {
+    let model;
 
-    expect(model.required).toBe(true);
+    beforeEach(() => {
+      model = new TextInputModel({ required: true });
+    });
+
+    it("is required", () => {
+      expect(model.required).toBe(true);
+    });
+
+    it("given value has been set, is valid", () => {
+      model.setValue("some-value");
+
+      expect(model.isValid).toBe(true);
+    });
   });
 
   it("knows how to reset value", () => {
