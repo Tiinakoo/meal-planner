@@ -10,9 +10,7 @@ exports[`App renders 1`] = `
     <div
       className="panel"
     >
-      <div
-        className="typography__primary"
-      >
+      <div>
         <Memo(wrappedComponent)
           createDepartmentModel={
             CreateDepartmentModel {
