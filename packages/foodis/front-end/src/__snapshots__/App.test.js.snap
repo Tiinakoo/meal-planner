@@ -1,23 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders 1`] = `
-<App>
+<div
+  className="App"
+>
   <div
-    className="App"
+    className="page"
   >
     <div
-      className="page"
+      className="panel"
     >
       <div
-        className="panel"
+        className="typography__primary"
       >
-        <div
-          className="typography__primary"
-        >
-          This is the most awesome meal app ever!
-        </div>
+        <Memo(wrappedComponent)
+          createDepartmentModel={
+            CreateDepartmentModel {
+              "dependencies": Object {
+                "submitDepartment": [Function],
+              },
+              "name": TextInputModel {
+                "required": true,
+                "value": "",
+              },
+            }
+          }
+        />
       </div>
     </div>
   </div>
-</App>
+</div>
 `;

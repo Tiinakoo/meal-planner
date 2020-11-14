@@ -1,17 +1,16 @@
-import App from './App';
-import { mount } from 'enzyme';
-import React from 'react';
-import '../../../library/setupUnitTests'
+import App from "./App";
+import { shallow } from "enzyme";
+import React from "react";
+import "../../../../setupUnitTests";
 
-describe('App', () => {
+describe("App", () => {
   let component;
 
-   beforeEach(() => {
-     component = mount(<App />);
-   });
+  beforeEach(() => {
+    component = shallow(<App />);
+  });
 
-  it('renders', () => {
+  it("renders", () => {
     expect(component).toMatchSnapshot();
   });
 });
-
