@@ -1,4 +1,4 @@
-import TextInputModel from "../components/shared/TextInputModel";
+import TextInputModel from "../components/shared/TextInput/TextInputModel";
 import { makeAutoObservable } from "mobx";
 
 export default class CreateDepartmentModel {

@@ -1,5 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
+import styles from "./TextInput.module.scss";
 
 const TextInput = ({
   model = {},
@@ -11,7 +12,8 @@ const TextInput = ({
 
   return (
     <input
-      className="input"
+      type="text"
+      className={styles.input}
       value={value}
       onChange={onNativeChange}
       placeholder="Add new department"

@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
-import TextInput from "../components/shared/TextInput";
+import TextInput from "../components/shared/TextInput/TextInput";
 
 const CreateDepartment = observer(({ createDepartmentModel }) => (
   <form>
