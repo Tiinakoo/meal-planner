@@ -1,0 +1,28 @@
+@import '../../../styles/mixins';
+@import '../../../styles/capitalize';
+@import '../../../styles/baseline';
+
+.bodyText {
+  color: black;
+
+  &__primary {
+    @include primaryFont();
+  }
+
+  &__secondary {
+    @include secondaryFont();
+  }
+
+  &__sizeSm {
+    font-size: 6 * $typographyBaseline;
+  }
+
+  &__sizeMd {
+    font-size: 4 * $typographyBaseline;
+  }
+
+  &__sizeLg {
+    font-size: 4 * $typographyBaseline;
+  }
+}
+
