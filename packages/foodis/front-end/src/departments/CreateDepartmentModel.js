@@ -1,9 +1,12 @@
 import TextInputModel from "../components/shared/TextInputModel";
+import { makeAutoObservable } from "mobx";
 
 export default class CreateDepartmentModel {
   dependencies = {};
 
   constructor(submitDepartment = () => {}) {
+    makeAutoObservable(this);
+
     this.dependencies.submitDepartment = submitDepartment;
   }
 

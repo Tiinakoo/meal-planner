@@ -1,5 +1,7 @@
 import CreateDepartmentModel from "./CreateDepartmentModel";
 import asyncFnForJest from "@async-fn/jest";
+import React from "react";
+import { isObservable } from "mobx";
 
 describe("CreateDepartmentModel", () => {
   let model;
@@ -9,6 +11,10 @@ describe("CreateDepartmentModel", () => {
     submitDepartmentMock = asyncFnForJest();
 
     model = new CreateDepartmentModel(submitDepartmentMock);
+  });
+
+  it("is observed", () => {
+    expect(isObservable(model)).toBe(true);
   });
 
   it("given name has not been set, when validity is checked, knows not to be valid", () => {
