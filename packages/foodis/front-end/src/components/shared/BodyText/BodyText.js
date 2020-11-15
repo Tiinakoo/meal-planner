@@ -2,6 +2,7 @@ import React from "react";
 import upperFirst from "lodash/fp/upperFirst";
 import styles from "./BodyText.module.scss";
 import classNames from "classnames";
+import { observer } from "mobx-react-lite";
 
 const BodyText = ({ size, font, className, children, ...props }) => {
   const classes = classNames([
@@ -18,4 +19,4 @@ const BodyText = ({ size, font, className, children, ...props }) => {
   );
 };
 
-export default BodyText;
+export default observer(BodyText);
