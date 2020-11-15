@@ -5,6 +5,7 @@ import InputWrapper from "../components/private/InputWrapper/InputWrapper";
 import translations from "../translations";
 import getLanguage from "../doings/getLanguage";
 import PrimaryButton from "../components/shared/PrimaryButton/PrimaryButton";
+import Flex from "../components/shared/Flex/Flex";
 
 const localTranslation = translations[getLanguage()];
 
@@ -21,14 +22,16 @@ const CreateDepartment = ({
         />
       </InputWrapper>
 
-      <PrimaryButton
-        onClick={submit}
-        size="sm"
-        enabled={isValid}
-        data-department-submit-test
-      >
-        {localTranslation.submit}
-      </PrimaryButton>
+      <Flex alignRight>
+        <PrimaryButton
+          onClick={submit}
+          size="sm"
+          enabled={isValid}
+          data-department-submit-test
+        >
+          {localTranslation.submit}
+        </PrimaryButton>
+      </Flex>
     </form>
   );
 };
