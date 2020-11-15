@@ -1,0 +1,114 @@
+@import '../../../styles/mixins';
+
+.flex {
+  display: flex;
+  flex-direction: row;
+
+  &__occupyVerticalSpace {
+    height: 100%;
+  }
+
+  &__centeredVertically {
+    align-items: center;
+  }
+
+  &__centeredHorizontally {
+    justify-content: center;
+  }
+
+  &__alignTop {
+    align-items: flex-start;
+  }
+
+  &__alignBottom {
+    align-items: flex-end;
+  }
+
+  &__alignBaseline {
+    align-items: baseline;
+  }
+
+  &__alignRight {
+    justify-content: flex-end;
+  }
+
+  &__spaceBetween {
+    justify-content: space-between;
+  }
+
+  &__wrapContent {
+    flex-wrap: wrap;
+  }
+
+  &__stretchToSameHeight {
+    align-items: stretch;
+  }
+
+  &__reverseDirection {
+    flex-direction: row-reverse;
+  }
+
+  &__pileVerticallyToXsScreen {
+    @include xs {
+      flex-direction: column;
+    }
+  }
+
+  &__pileVerticallyToSmScreen {
+    @include sm {
+      flex-direction: column;
+    }
+  }
+
+  &__pileVerticallyToMdScreen {
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &__pileVerticallyToLgScreen {
+    @include lg {
+      flex-direction: column;
+    }
+  }
+
+  &__pileVertically {
+    flex-direction: column;
+  }
+
+  &_flexItem {
+    min-width: 1px;
+    max-width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+  }
+
+  &__pileVerticallyToXsScreen > &_flexItem {
+    @include xs {
+      width: 100%;
+      flex: none;
+    }
+  }
+
+  &__pileVerticallyToSmScreen > &_flexItem {
+    @include sm{
+      width: 100%;
+      flex: none;
+    }
+  }
+
+  &__pileVerticallyToMdScreen > &_flexItem {
+    @include md {
+      width: 100%;
+      flex: none;
+    }
+  }
+
+  &__pileVerticallyToLgScreen > &_flexItem {
+    @include lg {
+      width: 100%;
+      flex: none;
+    }
+  }
+}
