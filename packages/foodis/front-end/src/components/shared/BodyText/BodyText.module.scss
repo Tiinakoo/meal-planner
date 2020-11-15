@@ -1,9 +1,12 @@
 @import '../../../styles/mixins';
 @import '../../../styles/capitalize';
 @import '../../../styles/baseline';
+@import '../../../styles/colors';
 
 .bodyText {
   color: black;
+  margin: 0;
+  color: color(white);
 
   &__primary {
     @include primaryFont();
