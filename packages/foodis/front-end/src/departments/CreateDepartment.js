@@ -1,15 +1,18 @@
 import React from "react";
-import { observer } from "mobx-react-lite";
 import TextInput from "../components/shared/TextInput/TextInput";
 import BodyText from "../components/shared/BodyText/BodyText";
+import { observer } from "mobx-react-lite";
 
-const CreateDepartment = observer(({ createDepartmentModel }) => (
+const CreateDepartment = ({ createDepartmentModel }) => (
   <form>
     <BodyText font="primary" size="md">
       Add new department
     </BodyText>
-    <TextInput model={createDepartmentModel.name} />
+    <TextInput
+      model={createDepartmentModel.name}
+      data-department-name-input-test
+    />
   </form>
-));
+);
 
-export default CreateDepartment;
+export default observer(CreateDepartment);

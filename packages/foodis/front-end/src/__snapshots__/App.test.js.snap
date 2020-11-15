@@ -10,21 +10,19 @@ exports[`App renders 1`] = `
     <div
       className="panel"
     >
-      <div>
-        <Memo(wrappedComponent)
-          createDepartmentModel={
-            CreateDepartmentModel {
-              "dependencies": Object {
-                "submitDepartment": [Function],
-              },
-              "name": TextInputModel {
-                "required": true,
-                "value": "",
-              },
-            }
+      <CreateDepartment
+        createDepartmentModel={
+          CreateDepartmentModel {
+            "dependencies": Object {
+              "submitDepartment": [Function],
+            },
+            "name": TextInputModel {
+              "required": true,
+              "value": "",
+            },
           }
-        />
-      </div>
+        }
+      />
     </div>
   </div>
 </div>
