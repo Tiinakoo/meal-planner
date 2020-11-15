@@ -3,6 +3,7 @@
 .inputWrapper {
   display: flex;
   flex-direction: column;
+  margin: $baseline 0;
 
   &_label {
     text-align: left;
