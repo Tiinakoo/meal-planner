@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateDepartment renders 1`] = `
+<CreateDepartment
+  createDepartmentModel={
+    Object {
+      "isValid": Object {},
+      "name": Object {},
+      "submit": [Function],
+    }
+  }
+>
+  <form>
+    <InputWrapper
+      label="Add new department"
+    >
+      <div>
+        <div>
+          <BodyText
+            font="primary"
+            size="md"
+          >
+            <p
+              className=""
+            >
+              Add new department
+            </p>
+          </BodyText>
+        </div>
+        <TextInput
+          data-department-name-input-test={true}
+          model={Object {}}
+        >
+          <input
+            data-department-name-input-test={true}
+            onChange={[Function]}
+            type="text"
+          />
+        </TextInput>
+      </div>
+    </InputWrapper>
+  </form>
+</CreateDepartment>
+`;

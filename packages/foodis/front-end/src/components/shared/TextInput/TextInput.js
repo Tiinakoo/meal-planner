@@ -6,6 +6,7 @@ const TextInput = ({
   model = {},
   value = model.value,
   onChange = model.setValue,
+  placeholder,
   ...props
 }) => {
   const onNativeChange = ({ target: { value } }) => onChange(value);
@@ -16,7 +17,7 @@ const TextInput = ({
       className={styles.input}
       value={value}
       onChange={onNativeChange}
-      placeholder="Add new department"
+      placeholder={placeholder}
       {...props}
     />
   );
