@@ -1,0 +1,67 @@
+@import '../../../styles/baseline';
+@import '../../../styles/colors';
+
+.button {
+  color: color(white);
+  transition: all 0.2s;
+  cursor: pointer;
+  border-radius: $baseline;
+  padding: $baseline 2 * $baseline;
+  margin: $baseline 0;
+
+  &__primary {
+    background-color: $primaryColor;
+
+    &:hover {
+      background-color: lighten($primaryColor, 2%);
+    }
+
+    &:active {
+      background-color: lighten($primaryColor, 5%);
+      color: color(white);
+      border-color: $primaryColor;
+    }
+
+    &.button__disabled {
+      background-color: lighten($primaryColor, 5%);
+      color: color(grey60);
+      border-color: $primaryColor;
+      cursor: unset;
+    }
+  }
+
+  &__secondary {
+    background-color: $secondaryColor;
+
+    &:hover {
+      $lighterColor: lighten($secondaryColor, 15%);
+
+      border-color: $lighterColor;
+      color: $lighterColor;
+    }
+
+    &:active {
+      background-color: $primaryColor;
+      color: color(white);
+      border-color: transparent;
+    }
+
+    &.button__disabled {
+      background-color: color(grey20);
+      color: color(grey60);
+      cursor: unset;
+    }
+  }
+
+  &__sizeSm {
+    font-size: 6 * $typographyBaseline;
+  }
+
+  &__sizeMd {
+    font-size: 4 * $typographyBaseline;
+  }
+
+  &__sizeLg {
+    font-size: 4 * $typographyBaseline;
+  }
+}
