@@ -8,7 +8,7 @@ module.exports = {
     ],
   },
   transformIgnorePatterns: [".*(node_modules)(?!.*(library).*).*$"],
-  setupFilesAfterEnv: ["./setUpUnitTests"],
+  setupFilesAfterEnv: ["./packages/foodis/front-end/setUpUnitTests"],
   watchPathIgnorePatterns: [
     "/node_modules/",
     "/coverage/",
