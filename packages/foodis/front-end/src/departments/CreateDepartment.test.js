@@ -27,4 +27,20 @@ describe("CreateDepartment", () => {
 
     expect(input).toHaveProp("model", createDepartmentModelStub.name);
   });
+
+  describe("a button within", () => {
+    let button;
+
+    beforeEach(() => {
+      button = component.find("Button[data-department-submit-test]");
+    });
+
+    it("knows how to submit", () => {
+      expect(button).toHaveProp("onClick", createDepartmentModelStub.submit);
+    });
+
+    it("knows when to be enabled", () => {
+      expect(button).toHaveProp("enabled", createDepartmentModelStub.isValid);
+    });
+  });
 });

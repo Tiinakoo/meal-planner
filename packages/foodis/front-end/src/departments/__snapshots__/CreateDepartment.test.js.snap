@@ -41,6 +41,39 @@ exports[`CreateDepartment renders 1`] = `
         </TextInput>
       </div>
     </InputWrapper>
+    <PrimaryButton
+      data-department-submit-test={true}
+      enabled={Object {}}
+      onClick={[Function]}
+      size="sm"
+    >
+      <Button
+        data-department-submit-test={true}
+        enabled={Object {}}
+        onClick={[Function]}
+        size="sm"
+        variant="primary"
+      >
+        <button
+          className=""
+          data-department-submit-test={true}
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <BodyText
+            font="primary"
+            size="md"
+          >
+            <p
+              className=""
+            >
+              Submit
+            </p>
+          </BodyText>
+        </button>
+      </Button>
+    </PrimaryButton>
   </form>
 </CreateDepartment>
 `;
