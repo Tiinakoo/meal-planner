@@ -30,10 +30,12 @@ exports[`CreateDepartment renders 1`] = `
         <TextInput
           data-department-name-input-test={true}
           model={Object {}}
+          placeholder="Write here"
         >
           <input
             data-department-name-input-test={true}
             onChange={[Function]}
+            placeholder="Write here"
             type="text"
           />
         </TextInput>
