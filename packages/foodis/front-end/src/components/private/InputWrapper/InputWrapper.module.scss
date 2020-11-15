@@ -1,0 +1,11 @@
+@import '../../../styles/baseline';
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+
+  &_label {
+    text-align: left;
+    padding: 0.5 * $baseline;
+  }
+}
