@@ -10,9 +10,7 @@ function App() {
     <div className="App">
       <div className="page">
         <div className="panel">
-          <div>
-            <CreateDepartment createDepartmentModel={createDepartmentModel} />
-          </div>
+          <CreateDepartment createDepartmentModel={createDepartmentModel} />
         </div>
       </div>
     </div>
