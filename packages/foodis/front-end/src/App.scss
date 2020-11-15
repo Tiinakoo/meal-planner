@@ -14,7 +14,7 @@
 .panel {
   margin: 5 * $baseline auto;
   background-color: $secondaryColor;
-  padding: 2 * $baseline;
+  padding: 4 * $baseline;
   max-width: 60 * $baseline;
 
   @include md {
