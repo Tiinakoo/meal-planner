@@ -3,7 +3,7 @@ import TextInput from "../components/shared/TextInput/TextInput";
 import { observer } from "mobx-react-lite";
 import InputWrapper from "../components/private/InputWrapper/InputWrapper";
 import translations from "../translations";
-import getLanguage from "../doings/getLanguage";
+import getLanguage from "../doings/getLanguage/getLanguage";
 import PrimaryButton from "../components/shared/PrimaryButton/PrimaryButton";
 import Flex from "../components/shared/Flex/Flex";
 
