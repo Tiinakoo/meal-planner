@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrimaryButton renders 1`] = `
+<PrimaryButton>
+  <Button
+    variant="primary"
+  >
+    <button
+      className=""
+      type="button"
+    >
+      <BodyText
+        font="primary"
+        size="md"
+      >
+        <p
+          className=""
+        >
+          Some button
+        </p>
+      </BodyText>
+    </button>
+  </Button>
+</PrimaryButton>
+`;
