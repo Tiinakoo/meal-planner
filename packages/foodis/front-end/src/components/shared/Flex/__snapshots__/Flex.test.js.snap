@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flex renders 1`] = `
+<Flex>
+  <div
+    className=""
+  />
+</Flex>
+`;
+
+exports[`Flex renders with alignRight 1`] = `
+<Flex
+  alignRight={true}
+>
+  <div
+    className=""
+  />
+</Flex>
+`;
