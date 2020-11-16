@@ -14,13 +14,13 @@ const CreateDepartment = ({
 }) => {
   return (
     <form>
-      <InputWrapper label={localTranslation.addNewDepartment}>
-        <TextInput
-          model={name}
-          placeholder={localTranslation.placeHolderForTextInput}
-          data-department-name-input-test
-        />
-      </InputWrapper>
+      <TextInput
+        model={name}
+        label={localTranslation.addNewDepartment}
+        placeholder={localTranslation.placeHolderForTextInput}
+        translation={localTranslation}
+        data-department-name-input-test
+      />
 
       <Flex alignRight>
         <PrimaryButton

@@ -11,36 +11,51 @@ exports[`CreateDepartment renders 1`] = `
   }
 >
   <form>
-    <InputWrapper
+    <TextInput
+      data-department-name-input-test={true}
       label="Add new department"
+      model={Object {}}
+      placeholder="Write here"
+      translation={
+        Object {
+          "addNewDepartment": "Add new department",
+          "placeHolderForTextInput": "Write here",
+          "submit": "Submit",
+        }
+      }
     >
-      <div>
+      <InputWrapper
+        label="Add new department"
+      >
         <div>
-          <BodyText
-            font="primary"
-            size="md"
-          >
-            <p
-              className=""
+          <div>
+            <BodyText
+              font="primary"
+              size="md"
             >
-              Add new department
-            </p>
-          </BodyText>
-        </div>
-        <TextInput
-          data-department-name-input-test={true}
-          model={Object {}}
-          placeholder="Write here"
-        >
+              <p
+                className=""
+              >
+                Add new department
+              </p>
+            </BodyText>
+          </div>
           <input
             data-department-name-input-test={true}
             onChange={[Function]}
             placeholder="Write here"
+            translation={
+              Object {
+                "addNewDepartment": "Add new department",
+                "placeHolderForTextInput": "Write here",
+                "submit": "Submit",
+              }
+            }
             type="text"
           />
-        </TextInput>
-      </div>
-    </InputWrapper>
+        </div>
+      </InputWrapper>
+    </TextInput>
     <Flex
       alignRight={true}
     >
